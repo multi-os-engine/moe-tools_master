@@ -30,6 +30,15 @@ ext {
 }
 
 /*
+ * PROJECT: external/r8
+ */
+ext {
+    external.r8 = [:]
+    external.r8.root = file("../../../external/r8").absolutePath
+    external.r8.out = file("${external.r8.root}/build/libs/").absolutePath
+}
+
+/*
  * PROJECT: external/libffi
  */
 for (target in [[name: 'ios'],
